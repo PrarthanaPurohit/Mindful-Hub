@@ -33,7 +33,7 @@ function Counselors() {
 
   const fetchCounselors = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/counselors');
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/counselors`);
       setCounselors(response.data);
     } catch (error) {
       console.error('Error fetching counselors:', error);
@@ -50,7 +50,7 @@ function Counselors() {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/appointments', {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/appointments`, {
         counselor: selectedCounselor._id,
         ...formData
       });

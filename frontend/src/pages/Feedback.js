@@ -32,7 +32,7 @@ function Feedback() {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/feedback', formData);
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/feedback`, formData);
       
       setSubmitted(true);
       setTimeout(() => {

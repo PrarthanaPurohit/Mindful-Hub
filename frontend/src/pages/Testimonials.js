@@ -23,7 +23,7 @@ function Testimonials() {
 
   const fetchTestimonials = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/testimonials');
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/testimonials`);
       setTestimonials(response.data);
     } catch (error) {
       console.error('Error fetching testimonials:', error);
@@ -35,7 +35,7 @@ function Testimonials() {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/testimonials', {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/testimonials`, {
         userName,
         rating,
         message

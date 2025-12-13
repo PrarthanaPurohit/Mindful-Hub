@@ -33,7 +33,7 @@ function MoodTracker() {
 
     setGettingSuggestions(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/suggestions', {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/suggestions`, {
         emotion: majorEmotion
       });
       setSuggestions(response.data.suggestions);
@@ -50,7 +50,7 @@ function MoodTracker() {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/moods', {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/moods`, {
         rating,
         dayDescription,
         majorEmotion,

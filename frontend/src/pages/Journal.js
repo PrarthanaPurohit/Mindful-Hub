@@ -16,7 +16,7 @@ function Journal() {
 
   const fetchJournals = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/journals');
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/journals`);
       setJournals(response.data);
     } catch (error) {
       console.error('Error fetching journals:', error);
@@ -28,7 +28,7 @@ function Journal() {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/journals', {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/journals`, {
         title,
         content
       });
