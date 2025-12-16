@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # Mindful-Hub
 
-Lightweight mental-health support app (backend + frontend).
+Mental-health support app.
 
 ## Project structure
 
