@@ -23,7 +23,13 @@ const counselorSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    required: true
+    required: true,
+    validate: {
+      validator: function(v) {
+        return /^\+91\d{10}$/.test(v);
+      },
+      message: props => `${props.value} is not a valid Indian phone number! Use format: +91XXXXXXXXXX`
+    }
   },
   availableDays: {
     type: [String],

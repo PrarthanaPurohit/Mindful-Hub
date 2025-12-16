@@ -146,10 +146,24 @@ function Counselors() {
                 type="tel"
                 className="form-input"
                 value={formData.userPhone}
-                onChange={(e) => setFormData({...formData, userPhone: e.target.value})}
-                placeholder="+1 (555) 123-4567"
+                onChange={(e) => {
+                  let value = e.target.value.replace(/\D/g, '');
+                  if (!value.startsWith('91') && value.length > 0) {
+                    value = '91' + value;
+                  }
+                  if (value.length > 12) {
+                    value = value.slice(0, 12);
+                  }
+                  setFormData({...formData, userPhone: value ? '+' + value : ''});
+                }}
+                placeholder="+919876543210"
+                pattern="^\+91\d{10}$"
+                title="Enter 10 digit mobile number (format: +91XXXXXXXXXX)"
                 required
               />
+              <small style={{ color: '#6b7280', fontSize: '0.875rem', marginTop: '4px', display: 'block' }}>
+                Format: +91 followed by 10 digits
+              </small>
             </div>
 
             <div className="form-group">

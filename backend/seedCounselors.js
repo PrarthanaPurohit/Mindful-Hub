@@ -11,7 +11,7 @@ const counselors = [
     qualification: "PhD in Clinical Psychology",
     experience: "12 years",
     email: "sarah.mitchell@therapy.com",
-    phone: "+1 (555) 123-4567",
+    phone: "+919876543210",
     availableDays: ["Monday", "Wednesday", "Friday"],
     rating: 4.9,
     bio: "Specialized in cognitive behavioral therapy with a focus on anxiety disorders and depression. Passionate about helping clients develop coping strategies."
@@ -22,7 +22,7 @@ const counselors = [
     qualification: "Licensed Marriage and Family Therapist",
     experience: "15 years",
     email: "james.rodriguez@therapy.com",
-    phone: "+1 (555) 234-5678",
+    phone: "+919876543211",
     availableDays: ["Tuesday", "Thursday", "Saturday"],
     rating: 4.8,
     bio: "Expert in couples therapy and family dynamics. Helps clients build stronger, healthier relationships through evidence-based practices."
@@ -33,7 +33,7 @@ const counselors = [
     qualification: "PsyD, Certified Mindfulness Instructor",
     experience: "8 years",
     email: "emily.chen@therapy.com",
-    phone: "+1 (555) 345-6789",
+    phone: "+919876543212",
     availableDays: ["Monday", "Tuesday", "Thursday"],
     rating: 4.7,
     bio: "Integrates mindfulness-based stress reduction with traditional therapy. Specializes in helping professionals manage work-life balance."
@@ -44,7 +44,7 @@ const counselors = [
     qualification: "MD, Psychiatrist",
     experience: "20 years",
     email: "michael.thompson@therapy.com",
-    phone: "+1 (555) 456-7890",
+    phone: "+919876543213",
     availableDays: ["Wednesday", "Friday", "Saturday"],
     rating: 4.9,
     bio: "Board-certified psychiatrist specializing in trauma recovery and PTSD treatment using EMDR and other evidence-based therapies."
@@ -55,7 +55,7 @@ const counselors = [
     qualification: "MA in Counseling Psychology",
     experience: "10 years",
     email: "priya.sharma@therapy.com",
-    phone: "+1 (555) 567-8901",
+    phone: "+919876543214",
     availableDays: ["Monday", "Wednesday", "Saturday"],
     rating: 4.8,
     bio: "Dedicated to supporting teenagers and young adults through life transitions, identity issues, and mental health challenges."
@@ -66,7 +66,7 @@ const counselors = [
     qualification: "LCSW, Certified Addiction Counselor",
     experience: "18 years",
     email: "robert.williams@therapy.com",
-    phone: "+1 (555) 678-9012",
+    phone: "+919876543215",
     availableDays: ["Tuesday", "Thursday", "Friday"],
     rating: 4.7,
     bio: "Compassionate addiction specialist helping individuals overcome substance abuse and behavioral addictions with holistic approaches."
