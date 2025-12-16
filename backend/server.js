@@ -16,6 +16,24 @@ mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('✅ MongoDB Connected'))
   .catch(err => console.error('❌ MongoDB Connection Error:', err));
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Mental Health Support API',
+    status: 'running',
+    endpoints: {
+      auth: '/api/auth',
+      journals: '/api/journals',
+      moods: '/api/moods',
+      suggestions: '/api/suggestions',
+      testimonials: '/api/testimonials',
+      counselors: '/api/counselors',
+      appointments: '/api/appointments',
+      feedback: '/api/feedback'
+    }
+  });
+});
+
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/journals', require('./routes/journals'));
