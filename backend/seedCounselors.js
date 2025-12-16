@@ -77,11 +77,17 @@ mongoose.connect(process.env.MONGODB_URI)
   .then(async () => {
     console.log('✅ MongoDB Connected');
     
-    // Clear existing counselors
-    await Counselor.deleteMany({});
-    console.log('🗑️  Cleared existing counselors');
+    // Check if counselors already exist
+    const existingCount = await Counselor.countDocuments();
     
-    // Insert new counselors
+    if (existingCount > 0) {
+      console.log(`ℹ️  ${existingCount} counselors already exist. Skipping seed.`);
+      console.log('💡 To force re-seed, manually delete counselors first.');
+      process.exit(0);
+      return;
+    }
+    
+    // Insert new counselors only if collection is empty
     await Counselor.insertMany(counselors);
     console.log('✅ Sample counselors added successfully!');
     
