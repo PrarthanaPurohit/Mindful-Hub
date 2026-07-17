@@ -132,10 +132,10 @@ function Feedback() {
               required
             >
               <option value="">Select a category</option>
-              <option value="bug">🐛 Bug Report</option>
-              <option value="feature">💡 Feature Request</option>
-              <option value="improvement">⚡ Improvement Suggestion</option>
-              <option value="general">💬 General Feedback</option>
+              <option value="bug"> Bug Report</option>
+              <option value="feature"> Feature Request</option>
+              <option value="improvement"> Improvement Suggestion</option>
+              <option value="general"> General Feedback</option>
             </select>
           </div>
 

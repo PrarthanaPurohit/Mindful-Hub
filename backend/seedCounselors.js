@@ -75,15 +75,15 @@ const counselors = [
 
 mongoose.connect(process.env.MONGODB_URI)
   .then(async () => {
-    console.log('✅ MongoDB Connected\n');
+    console.log(' MongoDB Connected\n');
     
     // Delete all existing counselors
     const deleteResult = await Counselor.deleteMany({});
-    console.log(`🗑️  Deleted ${deleteResult.deletedCount} existing counselors\n`);
+    console.log(`  Deleted ${deleteResult.deletedCount} existing counselors\n`);
     
     // Insert new counselors
     await Counselor.insertMany(counselors);
-    console.log('✅ Successfully added counselors!\n');
+    console.log(' Successfully added counselors!\n');
     
     console.log('Counselors:');
     counselors.forEach(c => {
@@ -93,6 +93,6 @@ mongoose.connect(process.env.MONGODB_URI)
     process.exit(0);
   })
   .catch(err => {
-    console.error('❌ Error:', err);
+    console.error(' Error:', err);
     process.exit(1);
   });

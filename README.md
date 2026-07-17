@@ -76,11 +76,11 @@ To seed example counselors (one-off):
 
 ```powershell
 =======
-# 🌟 Mental Wellness Journal - MERN Stack Application
+#  Mental Wellness Journal - MERN Stack Application
 
 A comprehensive mental wellness and journaling application built with the MERN stack (MongoDB, Express.js, React, Node.js). This application helps users track their mental health, write journals, connect with counselors, and receive AI-powered mood improvement suggestions.
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
@@ -93,26 +93,26 @@ A comprehensive mental wellness and journaling application built with the MERN s
 - [Contributing](#contributing)
 
 
-## ✨ Features
+##  Features
 
 ### Core Features
-- 🔐 **User Authentication** - Secure signup/login with JWT tokens
-- 📝 **Journal Writing** - Create and manage personal journal entries
-- 😊 **Mood Tracking** - Daily mood rating with emoji-based interface
-- 🤖 **AI-Powered Suggestions** - Get personalized mood improvement tips from OpenAI GPT
-- ⭐ **User Testimonials** - Share and read community success stories
-- 👨‍⚕️ **Counselor Directory** - Browse professional counselors and book appointments
-- 📅 **Appointment Booking** - Schedule sessions with mental health professionals
-- 💬 **Feedback System** - Submit bug reports, feature requests, and general feedback
+-  **User Authentication** - Secure signup/login with JWT tokens
+-  **Journal Writing** - Create and manage personal journal entries
+-  **Mood Tracking** - Daily mood rating with emoji-based interface
+-  **AI-Powered Suggestions** - Get personalized mood improvement tips from OpenAI GPT
+-  **User Testimonials** - Share and read community success stories
+-  **Counselor Directory** - Browse professional counselors and book appointments
+-  **Appointment Booking** - Schedule sessions with mental health professionals
+-  **Feedback System** - Submit bug reports, feature requests, and general feedback
 
 ### UI/UX Features
-- 🎨 Beautiful gradient-based design with glassmorphism effects
-- 📱 Fully responsive layout (mobile, tablet, desktop)
-- 🌈 Interactive elements with smooth animations
-- ⭐ Star rating system for testimonials and feedback
-- 🎯 Intuitive navigation with React Router
+-  Beautiful gradient-based design with glassmorphism effects
+-  Fully responsive layout (mobile, tablet, desktop)
+-  Interactive elements with smooth animations
+-  Star rating system for testimonials and feedback
+-  Intuitive navigation with React Router
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **React.js** - UI library
@@ -130,7 +130,7 @@ A comprehensive mental wellness and journaling application built with the MERN s
 - **bcryptjs** - Password hashing
 - **OpenAI API** - AI-powered suggestions
 
-## 📦 Prerequisites
+##  Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -140,7 +140,7 @@ Before you begin, ensure you have the following installed:
 - **OpenAI API Key** (for AI suggestions feature)
 - **Git**
 
-## 🚀 Installation
+##  Installation
 
 ### 1. Clone the Repository
 
@@ -163,7 +163,7 @@ cd ../frontend
 npm install
 ```
 
-## ⚙️ Configuration
+##  Configuration
 
 ### 1. Backend Environment Variables
 
@@ -233,12 +233,12 @@ If you want, I can also:
 =======
 Expected output:
 ```
-✅ MongoDB Connected
-🗑️  Cleared existing counselors
-✅ Sample counselors added successfully!
+ MongoDB Connected
+  Cleared existing counselors
+ Sample counselors added successfully!
 ```
 
-## 🏃‍♂️ Running the Application
+##  Running the Application
 
 ### Option 1: Run Both Servers Separately
 
@@ -277,7 +277,7 @@ Run both:
 npm run dev
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 mental-wellness-journal/
@@ -328,7 +328,7 @@ mental-wellness-journal/
 └── .gitignore
 ```
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 ### Authentication
 ```
@@ -386,7 +386,7 @@ GET    /api/feedback/my-feedback - Get user's feedback
 ```
 
 
-## 🧪 Testing
+##  Testing
 
 ### Test User Flow
 
@@ -410,7 +410,7 @@ Email: test@example.com
 Password: test123
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -439,7 +439,7 @@ netstat -ano | findstr :5000
 taskkill /PID <PID> /F
 ```
 
-## 🔐 Security Considerations
+##  Security Considerations
 
 - Passwords are hashed using bcryptjs
 - JWT tokens expire after 7 days
@@ -448,7 +448,7 @@ taskkill /PID <PID> /F
 - Protected API routes with auth middleware
 
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -466,7 +466,7 @@ Contributions are welcome! Please follow these steps:
 - Add comments for complex logic
 - Keep functions small and focused
 
-## 📝 Future Enhancements
+##  Future Enhancements
 
 - [ ] Email notifications for appointments
 - [ ] Admin dashboard for managing content
@@ -482,7 +482,7 @@ Contributions are welcome! Please follow these steps:
 
 
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [OpenAI](https://openai.com) for GPT API
 - [Lucide Icons](https://lucide.dev) for beautiful icons
@@ -491,7 +491,7 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-**⭐ If you find this project helpful, please consider giving it a star!**
+** If you find this project helpful, please consider giving it a star!**
 
 Made with ❤️ for mental wellness
 >>>>>>> f41bee1ddbb4d1e65b8de9f2928d3ec53aa92a9e
