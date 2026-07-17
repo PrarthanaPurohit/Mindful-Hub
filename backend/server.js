@@ -29,13 +29,18 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
   exposedHeaders: ['Authorization']
 }));
-app.options('*', cors());
+app.options('/*splat', cors());
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log(' MongoDB Connected'))
-  .catch(err => console.error(' MongoDB Connection Error:', err));
+const mongoUri = process.env.MONGODB_URI;
+if (!mongoUri) {
+  console.error('❌ MongoDB Connection Error: MONGODB_URI is not defined in environment variables.');
+} else {
+  mongoose.connect(mongoUri)
+    .then(() => console.log('✅ MongoDB Connected'))
+    .catch(err => console.error('❌ MongoDB Connection Error:', err));
+}
 
 // Root route
 app.get('/', (req, res) => {
