@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mindful-Hub
 
 Mental-health support app.
@@ -76,23 +77,25 @@ To seed example counselors (one-off):
 
 ```powershell
 =======
+=======
+>>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
 #  Mental Wellness Journal - MERN Stack Application
 
 A comprehensive mental wellness and journaling application built with the MERN stack (MongoDB, Express.js, React, Node.js). This application helps users track their mental health, write journals, connect with counselors, and receive AI-powered mood improvement suggestions.
 
+<<<<<<< HEAD
 ##  Table of Contents
+=======
+## Deploy URL
+>>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Running the Application](#running-the-application)
-- [Project Structure](#project-structure)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
+Frontend: https://mindful-hub-frontend.vercel.app/login  
+Backend: https://mindful-hub-backend.vercel.app/
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
 ##  Features
 
 ### Core Features
@@ -196,7 +199,7 @@ cd backend
 node seedCounselors.js
 ```
 
-<<<<<<< HEAD
+
 ## Git / Security notes
 
 - The repository includes a root `.gitignore` that excludes environment files and `node_modules`. Do not commit `.env` files or secrets.
@@ -216,10 +219,9 @@ git commit -m "Remove frontend node_modules from repo and update .gitignore"
 - Frontend
   - `npm start` — start React dev server
 
-## Contributing
 
-Open a PR with a clear description and run the linters/tests (if added).
 
+<<<<<<< HEAD
 ## License
 
 This repository currently has no license specified. Add a `LICENSE` file if you want to make the terms explicit.
@@ -277,6 +279,8 @@ Run both:
 npm run dev
 ```
 
+=======
+>>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
 ##  Project Structure
 
 ```
@@ -410,7 +414,11 @@ Email: test@example.com
 Password: test123
 ```
 
+<<<<<<< HEAD
 ##  Troubleshooting
+=======
+## Troubleshooting
+>>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
 
 ### Common Issues
 
@@ -458,8 +466,8 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### Code Style Guidelines
 
+<<<<<<< HEAD
 - Use ES6+ features
 - Follow Airbnb JavaScript Style Guide
 - Write meaningful commit messages
@@ -482,6 +490,8 @@ Contributions are welcome! Please follow these steps:
 
 
 
+=======
+>>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
 ##  Acknowledgments
 
 - [OpenAI](https://openai.com) for GPT API
@@ -494,4 +504,4 @@ Contributions are welcome! Please follow these steps:
 ** If you find this project helpful, please consider giving it a star!**
 
 Made with ❤️ for mental wellness
->>>>>>> f41bee1ddbb4d1e65b8de9f2928d3ec53aa92a9e
+>>>>>>> 
