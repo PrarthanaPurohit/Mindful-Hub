@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Mindful-Hub
 
 Mental-health support app.
