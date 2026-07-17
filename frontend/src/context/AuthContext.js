@@ -7,6 +7,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [loading, setLoading] = useState(true);
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
   useEffect(() => {
     if (token) {
@@ -28,7 +29,7 @@ export const AuthProvider = ({ children }) => {
   }, [token]);
 
   const login = async (email, password) => {
-    const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
+    const response = await axios.post(`${API_URL}/api/auth/login`, {
       email,
       password
     });
@@ -38,7 +39,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const signup = async (name, email, password) => {
-    const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/signup`, {
+    const response = await axios.post(`${API_URL}/api/auth/signup`, {
       name,
       email,
       password
