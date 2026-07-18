@@ -4,7 +4,7 @@
 - Frontend: https://mindful-hub-frontend.vercel.app/login
 - Backend: https://mindful-hub-backend.vercel.app/
 
-## Demo URL 
+## Demo  
 https://github.com/user-attachments/assets/4fddedf8-0c88-482d-a52f-48e2429a499a
 
 ## Overview
