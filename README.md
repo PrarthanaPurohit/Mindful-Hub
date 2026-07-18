@@ -1,213 +1,106 @@
 # Mindful-Hub
 
-Mental-health support app.
+## Deployed App
+- Frontend: https://mindful-hub-frontend.vercel.app/login
+- Backend: https://mindful-hub-backend.vercel.app/
 
-## Project structure
+## Overview
+Mindful-Hub is a mental health support platform built with a React frontend and an Express/MongoDB backend. It helps users track mood, write journals, connect with counselors, submit feedback, and access AI-powered suggestions.
 
-- `backend/` — Express API, MongoDB models, routes and seed script
-- `frontend/` — React app (Create React App structure)
+## Project Structure
+- `backend/` — API server, MongoDB models, authentication, routes, and seed data
+- `frontend/` — React application, pages, auth flow, and client-side routing
 
-## Prerequisites
+## Features
+- User signup and login with JWT authentication
+- Personal journal creation and management
+- Mood tracking with daily entries
+- AI-generated suggestions for mood improvement
+- Counselor directory and appointment booking
+- User testimonial and feedback submission
+- Responsive UI for desktop and mobile
 
-- Node.js (16+ recommended)
-- npm (comes with Node)
-- A MongoDB connection string (Atlas or local)
-- (Optional) OpenAI API key if using AI features
+## Tech Stack
+- Frontend: React, React Router, Axios, CSS
+- Backend: Node.js, Express, MongoDB, Mongoose, JWT, bcryptjs
+- Deployment: Vercel
 
-## Environment
-
-Copy the example env in the backend and fill in real values (do NOT commit your real `.env`):
-
-```powershell
-Copy-Item backend\.env.example backend\.env
-# then open and edit `backend\.env` with your secrets
-```
-
-`backend/.env.example` contains the variables required by the server:
-
-- `PORT` — port the backend will listen on
-- `MONGODB_URI` — MongoDB connection string
-- `JWT_SECRET` — JWT signing secret
-- `OPENAI_API_KEY` — (optional) OpenAI key
-
-## Setup
-
-1. Install backend dependencies and start server (development):
-
+## Local Setup
+### 1. Backend
 ```powershell
 cd backend
 npm install
-npm run dev   # starts nodemon server.js
-# or: npm start to run without nodemon
+```
+Copy the example `.env` and update the values:
+```powershell
+Copy-Item backend\.env.example backend\.env
+```
+Edit `backend\.env` and set:
+- `PORT`
+- `MONGODB_URI`
+- `JWT_SECRET`
+- `OPENAI_API_KEY` (optional)
+
+Start the backend server:
+```powershell
+npm run dev
 ```
 
-2. Install frontend dependencies and start the React app:
-
+### 2. Frontend
 ```powershell
-cd ..\frontend
+cd ../frontend
 npm install
 npm start
 ```
 
+Open `http://localhost:3000` in your browser to view the app.
+
 ## Deployment
-
-### Backend (Vercel)
-
-1. Push the backend folder to a GitHub repository.
-2. Connect the repository to Vercel.
-3. Set environment variables in Vercel dashboard:
+### Backend on Vercel
+1. Push `backend/` to GitHub.
+2. Connect the repo to Vercel.
+3. Add environment variables in Vercel:
    - `MONGODB_URI`
    - `JWT_SECRET`
-   - `OPENAI_API_KEY` (if using AI features)
-4. Deploy. The backend will be available at `https://your-backend-project.vercel.app`.
+   - `OPENAI_API_KEY` (optional)
+4. Deploy the backend.
 
-### Frontend (Vercel)
+### Frontend on Vercel
+1. Set `REACT_APP_API_URL` in `frontend/.env` to your backend URL.
+2. Push `frontend/` to GitHub.
+3. Connect the repo to Vercel and deploy.
 
-1. Update `frontend/.env` with the backend URL:
-   ```
-   REACT_APP_API_URL=https://your-backend-project.vercel.app
-   ```
-2. Push the frontend folder to a GitHub repository (or separate repo).
-3. Connect to Vercel and deploy. The frontend will build and deploy automatically.
+> Note: Deploy the backend first so the frontend can use the correct API URL.
 
-Note: Deploy backend first to get the URL for the frontend.
-
-To seed example counselors (one-off):
-
-```powershell
-=======
-=======
->>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
-#  Mental Wellness Journal - MERN Stack Application
-
-A comprehensive mental wellness and journaling application built with the MERN stack (MongoDB, Express.js, React, Node.js). This application helps users track their mental health, write journals, connect with counselors, and receive AI-powered mood improvement suggestions.
-
-<<<<<<< HEAD
-##  Table of Contents
-=======
-## Deploy URL
->>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
-
-Frontend: https://mindful-hub-frontend.vercel.app/login  
-Backend: https://mindful-hub-backend.vercel.app/
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
-##  Features
-
-### Core Features
--  **User Authentication** - Secure signup/login with JWT tokens
--  **Journal Writing** - Create and manage personal journal entries
--  **Mood Tracking** - Daily mood rating with emoji-based interface
--  **AI-Powered Suggestions** - Get personalized mood improvement tips from OpenAI GPT
--  **User Testimonials** - Share and read community success stories
--  **Counselor Directory** - Browse professional counselors and book appointments
--  **Appointment Booking** - Schedule sessions with mental health professionals
--  **Feedback System** - Submit bug reports, feature requests, and general feedback
-
-### UI/UX Features
--  Beautiful gradient-based design with glassmorphism effects
--  Fully responsive layout (mobile, tablet, desktop)
--  Interactive elements with smooth animations
--  Star rating system for testimonials and feedback
--  Intuitive navigation with React Router
-
-##  Tech Stack
-
-### Frontend
-- **React.js** - UI library
-- **React Router DOM** - Client-side routing
-- **Axios** - HTTP client
-- **Lucide React** - Icon library
-- **CSS3** - Styling with gradients and animations
-
-### Backend
-- **Node.js** - Runtime environment
-- **Express.js** - Web framework
-- **MongoDB** - NoSQL database
-- **Mongoose** - ODM for MongoDB
-- **JWT** - Authentication tokens
-- **bcryptjs** - Password hashing
-- **OpenAI API** - AI-powered suggestions
-
-##  Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-- **Node.js** (v14.0.0 or higher)
-- **npm** or **yarn**
-- **MongoDB** (local installation or MongoDB Atlas account)
-- **OpenAI API Key** (for AI suggestions feature)
-- **Git**
-
-##  Installation
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/mental-wellness-journal.git
-cd mental-wellness-journal
-```
-
-### 2. Install Backend Dependencies
-
-```bash
-cd backend
-npm install
-```
-
-### 3. Install Frontend Dependencies
-
-```bash
-cd ../frontend
-npm install
-```
-
-##  Configuration
-
-### 1. Backend Environment Variables
-
-Create a `.env` file in the `backend` directory:
-
+## Environment Variables
+### Backend (`backend/.env`)
 ```env
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/journal-app
-JWT_SECRET=your_super_secret_jwt_key_change_this_in_production
-OPENAI_API_KEY=sk-your-openai-api-key-here
+MONGODB_URI=mongodb://localhost:27017/mindful-hub
+JWT_SECRET=your_jwt_secret
+OPENAI_API_KEY=sk-your-openai-key
 ```
 
-**Getting your keys:**
+### Frontend (`frontend/.env`)
+```env
+REACT_APP_API_URL=https://mindful-hub-backend.vercel.app
+```
 
-- **MongoDB URI**: 
-  - Local: `mongodb://localhost:27017/journal-app`
-  - Cloud (Atlas): `mongodb+srv://username:password@cluster.mongodb.net/journal-app`
-  
-- **JWT Secret**: Generate a random string (e.g., use `openssl rand -base64 32`)
-
-- **OpenAI API Key**: Get it from [platform.openai.com](https://platform.openai.com)
-
-### 2. Seed Sample Data
-
-Populate the database with sample counselors:
-
-```bash
->>>>>>> f41bee1ddbb4d1e65b8de9f2928d3ec53aa92a9e
+## Seed Sample Data
+Run the counselor seed script once after the backend is running:
+```powershell
 cd backend
 node seedCounselors.js
 ```
 
+## Notes
+- Do not commit `.env` files with secrets.
+- Use a secure JWT secret in production.
+- If you want OpenAI features, add an `OPENAI_API_KEY`.
 
-## Git / Security notes
+## Contact
+For issues or contributions, open an issue in the repository or submit a pull request.
 
-- The repository includes a root `.gitignore` that excludes environment files and `node_modules`. Do not commit `.env` files or secrets.
-- If `frontend/node_modules` was committed previously, untrack it with:
-
-```powershell
-git rm -r --cached frontend/node_modules
-git commit -m "Remove frontend node_modules from repo and update .gitignore"
-```
 
 ## Useful scripts
 
@@ -218,26 +111,6 @@ git commit -m "Remove frontend node_modules from repo and update .gitignore"
 - Frontend
   - `npm start` — start React dev server
 
-
-
-<<<<<<< HEAD
-## License
-
-This repository currently has no license specified. Add a `LICENSE` file if you want to make the terms explicit.
-
----
-
-If you want, I can also:
-
-- run the `git rm --cached` command now to untrack `frontend/node_modules`, then commit the change;
-- add a short `.github/ISSUE_TEMPLATE` or `CONTRIBUTING.md`.
-=======
-Expected output:
-```
- MongoDB Connected
-  Cleared existing counselors
- Sample counselors added successfully!
-```
 
 ##  Running the Application
 
@@ -279,7 +152,6 @@ npm run dev
 ```
 
 =======
->>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
 ##  Project Structure
 
 ```
@@ -405,19 +277,8 @@ GET    /api/feedback/my-feedback - Get user's feedback
 6. **Counselors**: Browse and book appointments
 7. **Feedback**: Submit feedback about the app
 
-### Sample Test Credentials
 
-After seeding, you can create your own account or use:
-```
-Email: test@example.com
-Password: test123
-```
-
-<<<<<<< HEAD
-##  Troubleshooting
-=======
 ## Troubleshooting
->>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
 
 ### Common Issues
 
@@ -446,14 +307,6 @@ netstat -ano | findstr :5000
 taskkill /PID <PID> /F
 ```
 
-##  Security Considerations
-
-- Passwords are hashed using bcryptjs
-- JWT tokens expire after 7 days
-- Environment variables store sensitive data
-- Input validation on all forms
-- Protected API routes with auth middleware
-
 
 ##  Contributing
 
@@ -465,38 +318,6 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-<<<<<<< HEAD
-- Use ES6+ features
-- Follow Airbnb JavaScript Style Guide
-- Write meaningful commit messages
-- Add comments for complex logic
-- Keep functions small and focused
-
-##  Future Enhancements
-
-- [ ] Email notifications for appointments
-- [ ] Admin dashboard for managing content
-- [ ] Data visualization (mood trends, journal statistics)
-- [ ] Export journals as PDF
-- [ ] Dark mode toggle
-- [ ] Multi-language support
-- [ ] Mobile app (React Native)
-- [ ] Video call integration for counseling
-- [ ] Payment gateway for paid sessions
-- [ ] Social features (share anonymously)
-
-
-
-
-=======
->>>>>>> 0ab35dd803e9bc2c030f5570c5f7baa43ed4f3b4
-##  Acknowledgments
-
-- [OpenAI](https://openai.com) for GPT API
-- [Lucide Icons](https://lucide.dev) for beautiful icons
-- Mental health professionals who inspired this project
-- Open source community for amazing tools
 
 ---
 
