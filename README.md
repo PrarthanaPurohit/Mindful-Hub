@@ -1,8 +1,11 @@
 # Mindful-Hub
 
-## Deployed App
+## Deploy URL
 - Frontend: https://mindful-hub-frontend.vercel.app/login
 - Backend: https://mindful-hub-backend.vercel.app/
+
+## Demo URL 
+https://github.com/user-attachments/assets/4fddedf8-0c88-482d-a52f-48e2429a499a
 
 ## Overview
 Mindful-Hub is a mental health support platform built with a React frontend and an Express/MongoDB backend. It helps users track mood, write journals, connect with counselors, submit feedback, and access AI-powered suggestions.
